@@ -1,0 +1,19 @@
+<div class="container">
+	<h1>welcome to Bookmyshow</h1>
+
+<h3>Event name:<%= @event.name %></h3>
+<h1><%= image_tag @event.attachment_url.to_s, size: "100x100" %></h1>
+<% if @bookings_quantity < @event.ticket%>
+	<%= form_for @booking, url: booking_create_path(@booking) do |f|%>
+		No of tickets:<%= f.text_field :quantity %>
+		<%= f.hidden_field :status, value: "Ticket booked" %>
+		<%= f.hidden_field :event_id, value: params[:event_id]%>
+		<%= f.hidden_field :user_id, value: current_user.id %>
+		<%= f.submit %>
+	<% end %>
+<%else%>
+	<pre>
+		Ticket has been exprited
+	</pre>
+<%end%>
+</div>

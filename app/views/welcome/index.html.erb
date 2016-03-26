@@ -1,0 +1,78 @@
+<div class="container">
+	<%= link_to 'New Event', welcome_new_path,:class => "btn btn-info"  %>
+	<hr>
+
+	<%= form_tag welcome_index_path, :method => 'get' do %>
+	<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Search", :name => nil %>
+	</p>
+	<% end %>
+
+	<div class="row">
+
+		<div class="col-md-12">
+			<h3 class="page-header">My Events</h3>
+		</div>
+		<% if @my_events.present? %>
+		<% @my_events.each do |m|%>
+		<div class="col-sm-3 col-xs-6 top-align">
+			<% if m.attachment == nil %>
+			<img src = '../assets/05.jpg'>
+			<% else%>
+			<%= image_tag m.attachment_url.to_s,:size => "260x180"%>
+			<% end %>
+			<div class="caption">
+				<h3><%= m.name %></h3>
+				<p><b>Category</b>:<%= Category.find_by(id: m.category_id).name %></p>
+				<p><b>Total Tickets</b>:<%= m.ticket %></p>
+				<p><b>Ticket Amount</b>:<%= m.ticket_amount %></p>
+				<p><b>Expiry Date</b>:<%= m.expire_date %></p>
+				<%= link_to "Book Now!", booking_new_path(event_id: m.id), :class => "btn btn-primary" %><%= link_to 'Destroy', { action: :destroy, id: m.id }, method: :delete, data: { confirm: 'Are you sure?' },:class => "btn btn-danger right-align" %>
+			</div>
+		</div>
+		<%end%>
+		<%else%>
+		<pre>No events</pre>
+		<%end%>
+	</div>
+
+	<hr>
+
+	<div class="row">
+
+		<div class="col-md-12">
+			<h3 class="page-header">Other Events</h3>
+		</div>
+		<% if @other_events.present? %>
+		<% @other_events.each do |o|%>
+		<div class="col-sm-3 col-xs-6 top-align">
+			<%= image_tag o.attachment_url.to_s,:size => "260x180"%><br>
+			<div class="caption">
+				<h3><%= o.name %></h3>
+				<p><b>Category</b>:<%= Category.find_by(id: o.category_id).name %></p>
+				<p><b>Total Tickets</b>:<%= o.ticket %></p>
+				<p><b>Ticket Amount</b>:<%= o.ticket_amount %></p>
+				<p><b>Expiry Date</b>:<%= o.expire_date %></p>
+				<%= link_to "Book Now!", booking_new_path(event_id: o.id), :class => "btn btn-primary" %>
+			</div>
+		</div>
+		<%end%>
+		<%else%>
+		<pre>No events</pre>
+		<%end%>
+
+	</div>
+
+	<hr>
+
+	<!-- Footer -->
+	<footer>
+		<div class="row">
+			<div class="col-lg-12">
+				<p>Copyright &copy; Ticketshop 2014</p>
+			</div>
+		</div>
+		<!-- /.row -->
+	</footer>
+</div>

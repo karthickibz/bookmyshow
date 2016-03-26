@@ -1,0 +1,11 @@
+<%= form_for @event, url: welcome_create_path(@event) do |e| %>
+	Name:<%= e.text_field :name %><br>
+		<%= e.file_field :attachment %><br>
+		<%= e.select :category_id, Category.all.map{|m| [m.name,m.id]}%><br>
+	Place:<%= e.text_field :place %><br>
+	Ticket Count:<%= e.text_field :ticket %><br>
+	Ticket Amount:<%= e.text_field :ticket_amount%><br>
+	Expiry Date:<%= e.date_field :expire_date%><br>
+		<%= e.hidden_field :user_id, value: current_user.id %>
+	<%= e.submit%>
+<%end%>

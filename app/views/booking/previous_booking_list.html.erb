@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="col-md-12">
+		<h3>Previous Booking List</h3>
+		<table class="table">
+			<thead>
+				<tr>
+				<th>Event Name</th>
+					<th>No Of Tickets</th>
+					<th>Total Amount</th>
+					<th>Ticket Status</th>
+				</tr>
+			</thead>
+			<% @bookings.each do |b| %>
+			<tbody>
+				<tr>
+					<td><%= Event.find_by(id: b.event_id).name %></td>
+					<td><%= b.quantity %></td>
+					<td><%= b.amount %></td>
+					<td style="color:#64FE2E"><%= b.status %></td>
+				</tr>
+			</tbody>
+			<%end%>
+		</table>
+	</div>	
+</div>

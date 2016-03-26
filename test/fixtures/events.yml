@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  place: MyString
+  category_id: 1
+  ticket: 1
+  ticket_amount: 1
+  expire_date: MyString
+  user_id: 1
+  attachment: MyString
+
+two:
+  name: MyString
+  place: MyString
+  category_id: 1
+  ticket: 1
+  ticket_amount: 1
+  expire_date: MyString
+  user_id: 1
+  attachment: MyString

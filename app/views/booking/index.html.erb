@@ -1,0 +1,11 @@
+<div class="container">
+	 <h1>Ticket Booking Details</h1>
+
+<%= image_tag @event.attachment_url ,:size => "100x100"%><br>
+	Event name:<%=  @event.name %><br>
+	Ticket Quantity:<%= @booking.quantity %><br>
+	Per Ticket : <%= @event.ticket_amount %><br>
+	Total Amount : <%= @booking.amount %><br>
+	<h3 style="color:#64FE2E"><%= @booking.status %></h3><br>
+	<%=link_to "Previous Booking Details", booking_previous_booking_list_path, :class => "btn btn-primary"%>
+</div>

@@ -1,0 +1,7 @@
+<%= form_for @event, url: homes_create_path(@event) do |e| %>
+	name:
+	<%= e.text_field :name %>
+	<%= e.select :category_id, Category.all.map{|m| [m.name,m.id]}%>
+	<%= e.hidden_field :user_id, value: current_user.id %>
+	<%= e.submit %>
+<%end%>
