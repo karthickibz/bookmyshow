@@ -19,12 +19,13 @@ class WelcomeController < ApplicationController
 	def create
 		@event = Event.new(params.require(:event).permit(:name,:attachment,:category_id,:user_id,:place,:ticket,:ticket_amount,:expire_date))
 		@event.save
+		flash[:notice] = "Event successfully created"
 		redirect_to welcome_index_path
 	end
 	def destroy
 		@event = Event.find(params[:id])
 		@event.destroy
-
+		flash[:notice] = "Event successfully Deleted"
 		redirect_to welcome_index_path
 	end
 	

@@ -1,7 +1,12 @@
 <div class="container">
-	 <h1>Ticket Booking Details</h1>
+	<% if flash[:notice] %>
+	<div class="alert alert-success" role="alert">
+		<%= flash[:notice] %>
+	</div>
+	<% end %>
+	<h1>Ticket Booking Details</h1>
 
-<%= image_tag @event.attachment_url ,:size => "100x100"%><br>
+	<%= image_tag @event.attachment_url ,:size => "100x100"%><br>
 	Event name:<%=  @event.name %><br>
 	Ticket Quantity:<%= @booking.quantity %><br>
 	Per Ticket : <%= @event.ticket_amount %><br>

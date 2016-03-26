@@ -1,4 +1,9 @@
 <div class="container">
+	<% if flash[:notice] %>
+	<div class="alert alert-success" role="alert">
+		<%= flash[:notice] %>
+	</div>
+	<% end %>
 	<%= link_to 'New Event', welcome_new_path,:class => "btn btn-info"  %>
 	<hr>
 
@@ -17,10 +22,10 @@
 		<% if @my_events.present? %>
 		<% @my_events.each do |m|%>
 		<div class="col-sm-3 col-xs-6 top-align">
-			<% if m.attachment == nil %>
-			<img src = '../assets/05.jpg'>
+			<% if m.attachment.present? %>
+			<%= image_tag m.attachment_url.to_s,:size => "230x180"%>
 			<% else%>
-			<%= image_tag m.attachment_url.to_s,:size => "260x180"%>
+			<%= image_tag '05.jpg',:size => "230x180"%>
 			<% end %>
 			<div class="caption">
 				<h3><%= m.name %></h3>
@@ -47,7 +52,7 @@
 		<% if @other_events.present? %>
 		<% @other_events.each do |o|%>
 		<div class="col-sm-3 col-xs-6 top-align">
-			<%= image_tag o.attachment_url.to_s,:size => "260x180"%><br>
+			<%= image_tag o.attachment_url.to_s,:size => "230x180"%><br>
 			<div class="caption">
 				<h3><%= o.name %></h3>
 				<p><b>Category</b>:<%= Category.find_by(id: o.category_id).name %></p>

@@ -28,6 +28,7 @@ class BookingController < ApplicationController
         p @booking
         @booking.update_attributes(amount: @booking.quantity * @event_ticket_amt )
         # session[:booking_id] = @booking.id
+        flash[:notice] = "Ticket successfully Booked"
     		redirect_to booking_index_path(booking: @booking)
      end
     else

@@ -13,7 +13,7 @@
 			<% @bookings.each do |b| %>
 			<tbody>
 				<tr>
-					<td><%= Event.find_by(id: b.event_id).name %></td>
+					<td><%= previous_event(b) %></td>
 					<td><%= b.quantity %></td>
 					<td><%= b.amount %></td>
 					<td style="color:#64FE2E"><%= b.status %></td>

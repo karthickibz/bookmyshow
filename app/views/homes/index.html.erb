@@ -1,75 +1,106 @@
     <!-- Page Content -->
     <div class="container">
-
-    	<!-- Portfolio Item Heading -->
-       <%= form_tag homes_index_path, :method => 'get' do %>
-          <p>
-            <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag "Search", :name => nil %>
-          </p>
-          <% end %>
-          <hr>
-    	<div class="row">
-    		<div class="col-lg-12">
-    			<h1 class="page-header">Ticketshop
-    				<small>Here Book Your Tickets</small>
-          </h1>
-        </div>
-        <!-- /.row -->
-
-        <!-- Portfolio Item Row -->
-        <div class="row">
-          <div class="col-md-8">
-           <%= render "homes/slider" %>
-         </div>
-
-         <div class="col-md-4">
-           <h3>Ticketshop Description</h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-           <h3>Event Details</h3>
-           <ul>
-            <li>Select Event</li>
-            <li>Choose Category</li>
-            <li>Book Your Tickets</li>
-            <li>Enjoy The Show</li>
-          </ul>
-        </div>
-
+      <% if flash[:notice] %>
+      <div class="alert alert-success" role="alert">
+        <%= flash[:notice] %>
+      </div>
+      <% end %>
+      <!-- Portfolio Item Heading -->
+      <%= form_tag homes_index_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+      <% end %>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12">
+         <h1 class="page-header">Ticketshop
+          <small>Here Book Your Tickets</small>
+        </h1>
       </div>
       <!-- /.row -->
-      <!-- Related Projects Row -->
-      <div class="row">
 
-        <div class="col-lg-12">
-         <h3 class="page-header">All Events</h3>
+      <!-- Portfolio Item Row -->
+      <div class="row">
+        <div class="col-md-8">
+         <%= render "homes/slider" %>
        </div>
-       <% @events.each do |e|%>
-       <div class="col-sm-3 col-xs-6 top-align">
-         <%= image_tag e.attachment_url.to_s,:size => "260x180"%>
-         <div class="caption">
-          <h3><%= e.name %></h3>
-          <p><b>Category</b>:<%= Category.find_by(id: e.category_id).name %></p>
-          <p><b>Total Tickets</b>:<%= e.ticket %></p>
-          <p><b>Ticket Amount</b>:<%= e.ticket_amount %></p>
-          <p><b>Expiry Date</b>:<%= e.expire_date %></p>
-          <%= link_to "Book Now!", booking_new_path(event_id: e.id), :class => "btn btn-primary" %>
+
+       <div class="col-md-4">
+         <h3>Ticketshop Description</h3>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+         <h3>Event Details</h3>
+         <ul>
+          <li>Select Event</li>
+          <li>Choose Category</li>
+          <li>Book Your Tickets</li>
+          <li>Enjoy The Show</li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- /.row -->
+    <!-- Related Projects Row -->
+    <div class="row">
+
+      <div class="col-lg-12">
+       <h3 class="page-header">All Events</h3>
+     </div>
+     <% @events.each do |e|%>
+     <div class="col-sm-3 col-xs-6 top-align">
+       <% if e.attachment.present? %>
+       <%= image_tag e.attachment_url.to_s,:size => "240x180"%>
+       <% else%>
+       <%= image_tag '05.jpg',:size => "240x180"%>
+       <% end %>
+       <div class="caption">
+        <h3><%= e.name %></h3>
+        <p><b>Category</b>:<%= Category.find_by(id: e.category_id).name %></p>
+        <p><b>Total Tickets</b>:<%= e.ticket %></p>
+        <p><b>Ticket Amount</b>:<%= e.ticket_amount %></p>
+        <p><b>Expiry Date</b>:<%= e.expire_date %></p>
+        <%= link_to "Book Now!", booking_new_path(event_id: e.id), :class => "btn btn-primary" %>
+      </div>
+    </div>
+    <%end%>
+
+
+  </div>
+  <!-- /.row -->
+
+  <hr>
+
+  <!-- Footer -->
+  <footer id="footerWrapper" class="footer3">
+  <section id="mainFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="footerWidget text-center">
+            <h1 class="bigTitle text-center">+ 1-800-487-1254</h1> 
+            <address class="text-center">
+            </address>
+            <ul class="socialNetwork">
+              <li><a href="#" class="tips" title="follow me on Facebook"><i class="icon-facebook-1 iconRounded iconSmall"></i></a></li>
+              <li><a href="#" class="tips" title="follow me on Twitter"><i class="icon-twitter-bird iconRounded iconSmall"></i></a></li>
+              <li><a href="#" class="tips" title="follow me on Google+"><i class="icon-gplus-1 iconRounded iconSmall"></i></a></li>
+              <li><a href="#" class="tips" title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded iconSmall"></i></a></li>
+              <li><a href="#" class="tips" title="follow me on Dribble"><i class="icon-dribbble iconRounded iconSmall"></i></a></li>
+            </ul>    
+          </div>
         </div>
       </div>
-      <%end%>
-
-
     </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
+  </section>
+  <section id="footerRights">
+    <div class="container">
       <div class="row">
-       <div class="col-lg-12">
-        <p>Copyright &copy; Ticketshop 2014</p>
+        <div class="col-md-12">
+          <p>Copyright © 2014 <a href="http://www.little-neko.com" target="blank">Little NEKO</a> / All rights reserved.</p> 
+        </div>
       </div>
     </div>
-    <!-- /.row -->
-  </footer>
+  </section>
+</footer>
 
