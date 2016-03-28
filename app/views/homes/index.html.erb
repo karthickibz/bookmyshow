@@ -50,9 +50,9 @@
      <% @events.each do |e|%>
      <div class="col-sm-3 col-xs-6 top-align">
        <% if e.attachment.present? %>
-       <%= image_tag e.attachment_url.to_s,:size => "240x180"%>
+       <%= image_tag e.attachment_url.to_s,:size => "280x180"%>
        <% else%>
-       <%= image_tag '05.jpg',:size => "240x180"%>
+       <%= image_tag '05.jpg',:size => "280x180"%>
        <% end %>
        <div class="caption">
         <h3><%= e.name %></h3>

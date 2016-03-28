@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
   get 'booking/index'
 
   get 'booking/new'
