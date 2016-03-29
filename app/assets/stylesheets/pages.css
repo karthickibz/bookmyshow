@@ -201,9 +201,6 @@ body.dashboard .page-container {
 /* Bootstrap navbar 
 ------------------------------------
 */
-.navbar {
-  top: -1px;
-}
 .navbar-nav > li > a {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -876,7 +873,7 @@ body.dashboard .page-container {
 ------------------------------------
 */
 .breadcrumb {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -895,7 +892,7 @@ body.dashboard .page-container {
   padding-left: 0px;
 }
 .breadcrumb li p {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 11px !important;
   font-weight: 400;
   color: #7b7d82;
@@ -1403,7 +1400,7 @@ body.dashboard .page-container {
   height: calc(100% - 50px);
 }
 .panel .panel-heading .panel-title {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   text-transform: uppercase;
   display: inline-block;
   letter-spacing: 0.02em;
@@ -1488,7 +1485,7 @@ body.dashboard .page-container {
   float: right;
 }
 .panel.panel-featured .panel-title h4 {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 16px;
   text-transform: uppercase;
   color: #f0f0f0;
@@ -1731,13 +1728,13 @@ body.dashboard .page-container {
 */
 /* To Load Hinted Fonts for Windows */
 @font-face {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-style: normal;
   font-weight: 400;
   src: local('Montserrat-Regular'), url("<%= asset_path 'Montserrat-Regular.ttf' %>") format('truetype');
 }
 @font-face {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-style: normal;
   font-weight: 700;
   src: local('Montserrat-Bold'), url("<%= asset_path 'Montserrat-Bold.ttf' %>") format('truetype');
@@ -4406,7 +4403,7 @@ body > .pgn-wrapper {
   border-radius: 0;
   padding: 15px 20px;
   margin-right: 0;
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-weight: 400;
   color: rgba(98, 98, 98, 0.7);
   font-size: 12px;
@@ -5731,7 +5728,7 @@ fieldset[disabled] .form-control {
   margin-bottom: 10px;
 }
 .form-group label:not(.error) {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 600;
@@ -5746,7 +5743,7 @@ fieldset[disabled] .form-control {
 .form-group-default {
   background-color: #fff;
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border: 1px solid #867979;
   border-radius: 2px;
   padding-top: 7px;
   padding-left: 12px;
@@ -6157,7 +6154,7 @@ https://github.com/eternicode/bootstrap-datepicker
   content: "\f054";
 }
 .datepicker thead tr .dow {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   color: #6d5cae;
   text-transform: uppercase;
   font-size: 11px;
@@ -7060,7 +7057,7 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
 .table thead tr th {
   text-transform: uppercase;
   font-weight: 600;
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 13px;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -7360,7 +7357,7 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
   font-size: 12px;
 }
 .line-chart .nv-pointer-events-none .value.nv-pointer-events-none {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-weight: normal;
   font-size: 11px;
   color: #afafaf;
@@ -7576,7 +7573,7 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
 #tab-rickshaw-realtime #rickshaw-realtime_y_axis .rickshaw_graph .y_ticks text,
 #tab-rickshaw-realtime #rickshaw-realtime_y_axis .rickshaw_graph .x_ticks_d3 text {
   opacity: 0.35;
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 11px;
 }
 #tab-rickshaw-bars #rickshaw-stacked-bars.rickshaw_graph .detail .dot {
@@ -7613,7 +7610,7 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
 }
 #tab-rickshaw-slider .rickshaw_graph .y_ticks text,
 #tab-rickshaw-slider .rickshaw_graph .x_ticks_d3 text {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 11px;
 }
 #tab-rickshaw-slider .rickshaw_range_slider_preview .frame {
@@ -7639,7 +7636,7 @@ div.cs-skin-slide .cs-options ul li.cs-selected span {
   width: auto;
 }
 #tab-rickshaw-slider .chart .x_tick.plain .title {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 11px;
 }
 #tab-rickshaw-slider .y_axis {
@@ -8209,7 +8206,7 @@ input.list-view-search {
   height: 100%;
 }
 .email-wrapper .email-sidebar .btn-compose {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 13px;
   font-weight: normal;
   letter-spacing: 0.02em;
@@ -8219,7 +8216,7 @@ input.list-view-search {
   color: rgba(120, 129, 149, 0.5);
   opacity: .5;
   font-size: 10.8px;
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-weight: normal;
   letter-spacing: 0.03em;
 }
@@ -8313,7 +8310,7 @@ input.list-view-search {
   background: #f0f0f0;
   height: 30px;
   color: rgba(98, 98, 98, 0.7);
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   text-transform: uppercase;
   font-size: 10.8px;
   padding-left: 13px;
@@ -8832,7 +8829,7 @@ Events / .event-container
 .calendar .weeks-wrapper .week .day-wrapper .day.week-header {
   text-transform: uppercase;
   text-align: center;
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 10px;
 }
 .calendar .calendar-container {
@@ -10309,7 +10306,7 @@ Main components
 .widget-14-chart_y_axis .rickshaw_graph .y_ticks text,
 .widget-14-chart_y_axis .rickshaw_graph .x_ticks_d3 text {
   opacity: 0.35;
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 11px;
 }
 .widget-14-chart_y_axis .y_ticks.plain g:first-child {
@@ -11360,7 +11357,7 @@ Main components
   transition: all 0.1s ease-in-out;
 }
 .error-number {
-  font-family: 'Montserrat';
+  /*font-family: 'Montserrat';*/
   font-size: 90px;
   line-height: 90px;
 }
