@@ -9,10 +9,7 @@
     </div>
     <div class="login-container bg-white">
       <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
-        <%=link_to root_path do %>
-        <%=image_tag "celltoo-logo.png", "data-src-retina" => asset_path("celltoo-logo_no_bg.png"), height: "40", class: "img-responsive home-logo", width: "130" %>
-        <%end%>
-        <p class="p-t-35">Sign into your Celltoo account</p>
+        <p class="p-t-35">Sign into your Bookmyshow account</p>
         <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'p-t-15', role: 'form', remote: true, id: "form-login" }) do |f| %>
           <div class="form-group form-group-default">
             <%= f.label :email, t('email_address') %>
