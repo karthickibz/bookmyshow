@@ -22,3 +22,622 @@
  .navbar-fixed-bottom, .navbar-fixed-top{
  	position: relative;
  }
+ /*------------------------------------------------------------------
+[Login]
+*/
+.login-wrapper {
+	height: 100%;
+	background-color: #6d5cae;
+}
+.login-wrapper > * {
+	height: 100%;
+}
+.login-wrapper .bg-pic {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+}
+.login-wrapper .bg-pic > img {
+	height: 100%;
+	opacity: 0.6;
+}
+.bg-white {
+	background-color: #fff;
+}
+.login-wrapper .login-container {
+	width: 496px;
+	display: block;
+	position: relative;
+	float: right;
+	height: 700px;
+}
+.login-wrapper .bg-caption {
+	width: 500px;
+}
+.register-container {
+	width: 550px;
+	margin: auto;
+	height: 100%;
+}
+/* Responsive handlers : Login
+------------------------------------
+*/
+@media (max-width: 768px) {
+	.login-wrapper .login-container {
+		width: 100%;
+	}
+	.register-container {
+		width: 100%;
+		padding: 15px;
+	}
+}
+@media only screen and (max-width: 321px) {
+	.login-wrapper .login-container {
+		width: 100%;
+	}
+}
+/*------------------------------------------------------------------
+[23. Lock Screen]
+*/
+.lock-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+}
+.lock-screen-wrapper .credentials {
+	margin-top: -84px;
+	position: absolute;
+	top: 50%;
+}
+.lock-screen-wrapper .credentials .thumbnail-wrapper {
+	width: 53px;
+	height: 53px;
+}
+.lock-screen-wrapper .credentials .logged {
+	opacity: .21;
+	margin-top: -5px !important;
+}
+.lock-screen-wrapper .credentials .name {
+	opacity: .69;
+	margin-top: -5px !important;
+	font-size: 36px;
+	height: 45px;
+	overflow: hidden;
+}
+.lock-screen-wrapper .terms-wrapper > div {
+	display: table;
+}
+.lock-screen-wrapper .terms-wrapper .terms {
+	display: table-cell;
+	vertical-align: middle;
+}
+.lock-screen-wrapper .terms-wrapper .logo-terms {
+	width: 60px;
+	height: 60px;
+	border-radius: 15px;
+	text-align: center;
+	position: relative;
+}
+.lock-screen-wrapper .terms-wrapper .logo-terms .brand {
+	left: 50%;
+	margin-left: -21px;
+	margin-top: -5px;
+	position: absolute;
+	top: 50%;
+}
+/* Responsive Handlers : Lockscreen 
+------------------------------------
+*/
+@media (max-width: 767px) {
+	.lock-container {
+		width: 80%;
+	}
+	.lock-screen-wrapper .credentials form {
+		margin-top: 15px;
+	}
+}
+@media (max-width: 480px) {
+	.lock-screen-wrapper .credentials {
+		margin: 0;
+		position: static;
+		margin-top: 100px;
+		width: 100%;
+		float: left;
+		clear: both;
+	}
+	.lock-screen-wrapper .credentials > div {
+		text-align: center;
+	}
+	.lock-screen-wrapper .credentials .thumbnail-wrapper {
+		float: none;
+		margin: 0 auto;
+	}
+}
+.error-page .pull-bottom {
+	position: relative;
+}
+.sm-pull-bottom,
+.sm-pull-up {
+	position: relative !important;
+}
+.pull-bottom {
+	position: absolute !important;
+	bottom: 0;
+}
+.widget-1 > .panel-body > *:not(.pull-bottom) {
+	position: relative;
+}
+.widget-1 > .panel-body .pull-bottom {
+	padding: 0 49px 56px 42px;
+}
+.social-wrapper .social .cover-photo .pull-bottom {
+	z-index: 2;
+}
+.notification-positions .position.pull-top,
+.notification-positions .position.pull-bottom {
+	left: 0;
+	right: 0;
+}
+.sm-pull-bottom,
+.sm-pull-up {
+	position: relative !important;
+}
+.text-white {
+	color: #fff !important;
+}
+.p-l-20 {
+	padding-left: 20px !important;
+}
+.sm-p-l-20 {
+	padding-left: 20px !important;
+}
+.sm-m-b-20 {
+	margin-bottom: 20px !important;
+}
+.m-b-20 {
+	margin-bottom: 20px;
+}
+.semi-bold {
+	font-weight: 400 !important;
+}
+.well.well-small {
+	padding: 13px;
+	width: auto;
+}
+.small-text {
+	font-size: 12px !important;
+}
+small,
+.small {
+	font-size: 89%;
+	line-height: 17px;
+}
+.p-l-50 {
+	padding-left: 50px !important;
+}
+.m-l-20 {
+	margin-left: 20px;
+}
+.sm-p-r-50 {
+	padding-right: 50px !important;
+}
+.p-r-50 {
+	padding-right: 50px !important;
+}
+.m-r-20 {
+	margin-right: 20px;
+}
+.p-t-50 {
+	padding-top: 50px !important;
+}
+.m-t-30 {
+	margin-top: 30px;
+}
+.sm-p-l-15 {
+	padding-left: 15px !important;
+}
+.sm-p-r-15 {
+	padding-right: 15px !important;
+}
+.sm-p-t-40 {
+	padding-top: 40px !important;
+}
+.p-t-35 {
+	padding-top: 35px !important;
+}
+.h100{height: 100px !important;}
+.repair-form-group{
+	display: inline-block;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+.form-group-default .cs-wrapper {
+	width: 100%;
+}
+.form-group-default .cs-skin-slide > span {
+	padding: 0 30px 0 0;
+	height: 22px;
+	line-height: 21px;
+}
+.form-group-default .bootstrap-tagsinput {
+	border: 0px;
+	padding-left: 0;
+}
+.form-group-default .select2-container .select2-choice,
+.select2-container-multi .select2-choices {
+	border-color: transparent;
+}
+/* Form Groups 
+--------------------------------------------------
+*/
+.form-group {
+	margin-bottom: 10px;
+}
+.form-group label:not(.error) {
+	/*font-family: 'Montserrat';*/
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.form-group label .help {
+	margin-left: 8px;
+}
+.form-group .help {
+	font-size: 12px;
+	color: rgba(98, 98, 98, 0.55);
+}
+.form-group-default {
+	background-color: #fff;
+	position: relative;
+	border: 1px solid #867979;
+	border-radius: 2px;
+	padding-top: 7px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 4px;
+	overflow: hidden;
+	-webkit-transition: background-color 0.2s ease;
+	transition: background-color 0.2s ease;
+}
+.form-group-default.required:after {
+	color: #f55753;
+	content: "*";
+	font-family: arial;
+	font-size: 20px;
+	position: absolute;
+	right: 15px;
+	top: 9px;
+}
+.form-group-default.disabled {
+	background: #f8f8f8;
+	color: rgba(98, 98, 98, 0.23);
+}
+.form-group-default.disabled input {
+	opacity: .6;
+}
+.form-group-default.disabled.focused {
+	background: #f8f8f8;
+}
+.form-group-default.disabled.focused label {
+	opacity: 1;
+}
+.form-group-default.focused {
+	border-color: rgba(0, 0, 0, 0.1) !important;
+	background-color: #f0f0f0;
+}
+.form-group-default.focused label {
+	opacity: .4;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.form-group-default.has-error {
+	background-color: rgba(245, 87, 83, 0.1);
+}
+.form-group-default.has-success .form-control-feedback,
+.form-group-default.has-error .form-control-feedback {
+	display: none !important;
+}
+.form-group-default.has-success .form-control,
+.form-group-default.has-success .form-control:focus,
+.form-group-default.has-error .form-control,
+.form-group-default.has-error .form-control:focus {
+	border: none;
+	box-shadow: none;
+}
+.form-group-default.input-group {
+	padding: 0;
+}
+.form-group-default.input-group > label {
+	margin-top: 6px;
+	padding-left: 12px;
+}
+.form-group-default.input-group > .form-control {
+	margin-top: -2px;
+	margin-bottom: 3px;
+	padding-left: 12px;
+}
+.form-group-default.input-group .input-group-addon {
+	height: calc(50px);
+	min-width: calc(50px);
+	border-radius: 0;
+	border: none;
+}
+.form-group-default.input-group.focused .input-group-addon {
+	border-color: rgba(0, 0, 0, 0.1);
+}
+.form-group-default .form-control {
+	border: none;
+	height: 25px;
+	min-height: 25px;
+	padding: 0;
+	margin-top: -4px;
+	background: none;
+}
+.form-group-default .form-control.error {
+	color: #2c2c2c;
+}
+.form-group-default .form-control:focus {
+	background: none;
+}
+.form-control-height{
+   height: 150px !important;
+}
+.select2.form-control {
+  padding: 0;
+  box-shadow: none;
+  border: 0;
+}
+/* Form validation
+--------------------------------------------------
+*/
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline {
+  color: #564169;
+}
+.has-success .form-control {
+  border-color: #564169;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.has-success .form-control:focus {
+  border-color: #09786e;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.has-success .input-group-addon {
+  background: #f0f0f0;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  color: rgba(98, 98, 98, 0.47);
+}
+.has-success .form-control-feedback {
+  color: #564169;
+}
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline {
+  color: #c9a843;
+}
+.has-warning .form-control {
+  border-color: #c9a843;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.has-warning .form-control:focus {
+  border-color: #a98b31;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.has-warning .input-group-addon {
+  background: #f0f0f0;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  color: rgba(98, 98, 98, 0.47);
+}
+.has-warning .form-control-feedback {
+  color: #c9a843;
+}
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+  color: #f55753;
+}
+.has-error .form-control {
+  border-color: #f55753;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.has-error .form-control:focus {
+  border-color: #f22823;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-group-default label {
+	margin: 0;
+	display: block;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease;
+}
+.form-group-default label.label-lg {
+	font-size: 13px;
+	left: 13px;
+	top: 9px;
+}
+.form-group-default label.label-sm {
+	font-size: 11px;
+	left: 11px;
+	top: 6px;
+}
+.form-group-default label.highlight {
+	opacity: 1;
+}
+.form-group-default label.fade {
+	opacity: .5;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.form-group-default > .input-lg {
+	height: 29px;
+	min-height: 29px;
+	padding-left: 1px;
+}
+.form-group-default > .input-sm {
+	min-height: 18px;
+	height: 18px;
+}
+.form-group-default.form-group-default-select2 {
+	padding: 0;
+}
+.form-group-default.form-group-default-select2 > label {
+	position: absolute;
+	z-index: 10;
+	padding: 7px 12px 0 12px;
+}
+.form-group-default.form-group-default-select2 > label.label-lg {
+	left: 0;
+	top: 0;
+}
+.form-group-default.form-group-default-select2 > label.label-sm {
+	left: 0;
+	top: 0;
+}
+.form-group-default.form-group-default-select2 .select2-container .select2-choice {
+	padding-top: 20px;
+	height: 52px;
+}
+.form-group-default.form-group-default-select2 .select2-container .select2-choice .select2-arrow b:before {
+	top: 20px;
+}
+.form-group-default.form-group-default-select2 .select2-container .select2-choice .select2-chosen {
+	padding-left: 3px;
+	padding-top: 1px;
+}
+.form-group-default.form-group-default-select2 .select2-container .select2-choices {
+	padding-top: 20px;
+	height: 52px;
+	border: 0px;
+}
+.form-group-default.form-group-default-select2 > .input-lg {
+	height: auto;
+	padding: 0;
+}
+.form-group-default.form-group-default-select2 > .input-lg .select2-choice {
+	padding-top: 20px;
+	height: 56px;
+}
+.form-group-default.form-group-default-select2 > .input-sm {
+	height: auto;
+	padding: 0;
+}
+.form-group-default.form-group-default-select2 > .input-sm .select2-choice {
+	padding-top: 20px;
+	height: 46px;
+}
+.form-group-default.form-group-default-selectFx {
+	padding: 0;
+}
+.form-group-default.form-group-default-selectFx > label {
+	position: absolute;
+	z-index: 10;
+	padding: 7px 12px 0 12px;
+}
+.form-group-default.form-group-default-selectFx > label.label-lg {
+	left: 0;
+	top: 0;
+}
+.form-group-default.form-group-default-selectFx > label.label-sm {
+	left: 0;
+	top: 0;
+}
+.form-group-default.form-group-default-selectFx .cs-wrapper .cs-placeholder {
+	padding-top: 28px;
+	height: 52px;
+	padding-left: 12px;
+}
+.form-group-default.form-group-default-selectFx .cs-wrapper .cs-select {
+	height: auto;
+}
+.form-group-default.form-group-default-selectFx .cs-wrapper .cs-select > span:after,
+.form-group-default.form-group-default-selectFx .cs-wrapper .cs-select .cs-selected span:after {
+	top: 39px;
+}
+.form-group-default.form-group-default-selectFx .cs-wrapper .cs-select.input-lg .cs-placeholder {
+	height: 60px;
+}
+.form-group-default.form-group-default-selectFx .cs-wrapper .cs-select.input-sm .cs-placeholder {
+	height: 50px;
+}
+.form-group-default.form-group-default-selectFx .cs-wrapper .dropdown-placeholder {
+	vertical-align: top;
+}
+.simform .controls {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.simform .controls .next,
+.simform .controls .number {
+	display: none !important;
+}
+.map-controls {
+	position: absolute;
+	left: 50px;
+	top: 80px;
+	z-index: 1;
+}
+body.menu-pin .page-sidebar .sidebar-header .sidebar-header-controls {
+	transform: translateX(18px);
+	-webkit-transform: translateX(18px);
+}
+.map-controls {
+	left: 10px;
+}
+.panel .panel-heading .panel-controls {
+	float: right;
+	margin-top: -3px;
+}
+.panel .panel-heading .panel-controls ul {
+	margin: 0;
+	padding: 0;
+}
+.panel .panel-heading .panel-controls ul li {
+	display: inline-block;
+	list-style: none;
+	line-height: 0;
+}
+.panel .panel-heading .panel-controls:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.chat-view .user-controls {
+  padding-top: 12px;
+}
+.panel .panel-body.no-padding .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.no-padding {
+  padding: 0px !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-info {
+  color: #3b4752 !important;
+}
+.sm-p-t-30 {
+    padding-top: 50px !important;
+  }
