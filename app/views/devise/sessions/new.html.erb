@@ -27,14 +27,14 @@
             <div class="col-md-6 no-padding">
               <div class="checkbox ">
                 <%=f.check_box :remember_me %>
-                <%=f.label :remember_me, t('remember_me') %>
+                <%=f.label :remember_me, ('remember_me') %>
               </div>
             </div>
             <div class="col-md-6 text-right">
-              <%= link_to t('forgot_your_password'), new_password_path(resource_name), class: "text-info small"%>
+              <%= link_to ('forgot_your_password'), new_password_path(resource_name), class: "text-info small"%>
             </div>
             <div class="col-md-6 text-right">
-              New member? <%= link_to t('click here'), new_user_registration_path(), class: "text-info small"%>
+              New member? <%= link_to ('click here'), new_user_registration_path(), class: "text-info small"%>
             </div>
           </div>
           <%= f.submit ('sign_in'), :class => 'btn btn-primary btn-cons m-t-10'%>
