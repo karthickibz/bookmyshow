@@ -1,43 +1,54 @@
-  <div class="login-wrapper ">
-    <div class="bg-pic">
-      <%=image_tag asset_path("03.jpg"), "data-src" => asset_path("sign-in-left-column.jpg"), "data-src-retina" => asset_path("sign-in-left-column.jpg"), class: "lazy" %>
-      <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
-        <h2 class="semi-bold text-white">
-        <p class="small">
-        </p>
-      </div>
-    </div>
-    <div class="login-container bg-white">
-      <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
-        <p class="p-t-35">Sign into your Bookmyshow account</p>
-        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'p-t-15', role: 'form', remote: true, id: "form-login" }) do |f| %>
-          <div class="form-group form-group-default">
-            <%= f.label :email, t('email_address') %>
-            <div class="controls">
-              <%= f.email_field :email, :autofocus => true, class: 'form-control', required: true %>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 login-content"> 
+      <div class="row" style="height: 100%;">
+        <div class="panel panel-info" style="height: 100%;" >
+          <div class="panel-heading">
+            <div class="panel-title">Bookmyshow</div>
           </div>
-          <div class="form-group form-group-default">
-            <%= f.label :password, t('password') %>
-            <div class="controls">
-              <%= f.password_field :password, class: 'form-control', required: true %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 no-padding">
-              <div class="checkbox ">
-                <%=f.check_box :remember_me %>
-                <%=f.label :remember_me, ('remember_me') %>
+          <div class="panel-body loginform">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= devise_error_messages!.html_safe %>
+
+              <div class="input-group login-main-content">
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true, :class => "form-control" %>
               </div>
-            </div>
-            <div class="col-md-6 text-right">
-              <%= link_to ('forgot_your_password'), new_password_path(resource_name), class: "text-info small"%>
-            </div>
-            <div class="col-md-6 text-right">
-              New member? <%= link_to ('click here'), new_user_registration_path(), class: "text-info small"%>
-            </div>
-          </div>
-          <%= f.submit ('sign_in'), :class => 'btn btn-primary btn-cons m-t-10'%>
-        <% end %> 
+
+              <div class="input-group login-main-content">
+                <%= f.label :password %><br />
+                <%= f.password_field :password, autocomplete: "off", :class => "form-control"  %>
+              </div>
+
+              <% if devise_mapping.rememberable? -%>
+                <div class="input-group login-main-content">
+                  <%= f.label :remember_me %>
+                  <div class="material-switch pull-right">
+                    <%= f.check_box :remember_me, :id => "someSwitchOptionSuccess"%>
+                    <label for="someSwitchOptionSuccess" class="label-success"></label>
+                  </div>
+                </div>
+
+              <% end -%>
+
+              <div class="input-group login-main-content-center">
+                <%= f.submit "Log in",:class => "btn btn-create" %>
+              </div>
+
+              <div class="input-group login-main-content-center">
+                <%= link_to "Create Account", new_user_registration_path, :class => 'login-link'  %>
+              </div>
+
+              <div class="input-group login-main-content-center">
+                <%= link_to "Forgot Password?", new_password_path(resource_name), :class => "login-link"%>
+              </div>
+
+            <% end %>
+          </div>                     
+        </div>
+      </div>                  
     </div>
+    <div class="col-md-9">
+    </div>  
+  </div>
 </div>
