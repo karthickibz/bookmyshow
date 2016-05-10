@@ -10,7 +10,6 @@
 				<th>Ticket Status</th>
 				<th>Date</th>
 				<th>Time</th>
-				<th>Place</th>
 				</tr>
 			</thead>
 			<% @bookings.each do |b| %>
@@ -20,9 +19,8 @@
 					<td><%= b.quantity %></td>
 					<td><%= b.amount %></td>
 					<td style="color:#64FE2E"><%= b.status %></td>
-					<td>Date</td>
-					<td>Time</td>
-					<td>Place</td>
+					<td><%= b.created_at.to_date %></td>
+					<td><%= b.created_at.to_time %></td>
 				</tr>
 			</tbody>
 			<%end%>
