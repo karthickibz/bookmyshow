@@ -23,6 +23,15 @@ gem 'instagram'
 gem 'omniauth-google-oauth2'
 gem 'carrierwave'
 gem 'mini_magick'
+
+#Export as PDF
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem 'pdf-writer'
+
+#stripe
+gem 'stripe'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

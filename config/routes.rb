@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   post 'welcome/create'
   root 'homes#index'
   devise_for :users
+
+  resources :charges
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

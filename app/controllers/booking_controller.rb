@@ -38,7 +38,25 @@ class BookingController < ApplicationController
 
   def previous_booking_list
     @bookings = Booking.where(user_id: current_user.id)
+
+    # respond_to do |format|
+    #   format.html
+    #   format.pdf do
+    #     render :pdf => "previous_booking_list.html.erb",
+    #     :layout => "pdf",
+    #     :template => "booking/pdf_previous_booking_list.html.erb",
+    #     margin:  {   left: "10mm"}
+    #   end 
+    # end
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "previous_booking_list"
+      end
+    end
   end
+
   private
     def user_method
       @user = User.find_by(id: current_user.id)

@@ -10,7 +10,6 @@
 				<th>Ticket Status</th>
 				<th>Date</th>
 				<th>Time</th>
-				<th>PDF</th>
 				</tr>
 			</thead>
 			<% @bookings.each do |b| %>
@@ -22,7 +21,6 @@
 					<td style="color:#64FE2E"><%= b.status %></td>
 					<td><%= b.created_at.to_date %></td>
 					<td><%= b.created_at.to_time %></td>
-					<td><%=link_to "Export as PDF", booking_previous_booking_list_path(:format => "pdf")%></td>
 				</tr>
 			</tbody>
 			<%end%>
